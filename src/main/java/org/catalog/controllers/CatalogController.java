@@ -128,7 +128,7 @@ public class CatalogController {
 
     @ApiOperation(value = "Search product by category and price",response = Iterable.class)
     @RequestMapping(value = "/category/priceselection", method= RequestMethod.GET, produces = "application/json")
-    public  @ResponseBody Iterable<PriceSelection> productsByCategory(@RequestParam Long categoryId, @RequestParam int price, Model model){
+    public  @ResponseBody Iterable<PriceSelection> productsByCategory(@RequestParam  Long categoryId, @RequestParam long price, Model model){
 
         ProductCategory productCategory = categoryRepository.findOne(categoryId);
         if (productCategory != null) {
@@ -137,10 +137,8 @@ public class CatalogController {
             List<Product> products = productCategory.getProducts();
 
             for (Product product: products){
-
-                int count = price/product.getPrice();
+                long count = price/ product.getPrice();
                 if (count > 0) {
-
                     priceSelections.add(new PriceSelection( product.getName(), count));
                 }
             }
