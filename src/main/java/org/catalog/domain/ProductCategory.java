@@ -50,13 +50,7 @@ public  class ProductCategory {
         this.products = products;
     }
 
-    public boolean hasProduct(Product product) {
-        for (Product itProduct: getProducts()) {
-            if (itProduct.getId() == product.getId()) {
-                return true;
-            }
-        }
-        return false;
+    public void addProduct (Product product) {
+        products.add(product);
     }
-
 }
