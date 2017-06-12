@@ -38,7 +38,6 @@ public class CatalogController {
     CategoryRepository categoryRepository;
 
 
-    //@ApiOperation(value = "View a list of available products",response = Iterable.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "OK"),
             @ApiResponse(code = 404, message = "NOT FOUND")
