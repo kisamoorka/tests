@@ -38,12 +38,6 @@ public class CatalogController {
     CategoryRepository categoryRepository;
 
 
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "OK"),
-            @ApiResponse(code = 404, message = "NOT FOUND")
-    }
-    )
-
     @ApiOperation(value = "Search all category")
     @RequestMapping(value = "/categories", method= RequestMethod.GET, produces = "application/json")
     public  @ResponseBody Iterable<ProductCategory> allProductCategories(Model model){
