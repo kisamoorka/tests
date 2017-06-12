@@ -28,7 +28,7 @@ public class Application implements CommandLineRunner {
 		Product mazda3 = new Product("mazda 3", 1450000);
 		Product fordf = new Product("ford focus", 780000);
 		Product nissana = new Product("nissan almera", 495000);
-		Product audi7 = new Product("mazda 3", 3320000);
+		Product audi7 = new Product("audi 7", 3320000);
 
 		productRepository.save(mazda3);
 		productRepository.save(fordf);

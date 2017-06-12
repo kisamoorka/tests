@@ -11,15 +11,15 @@ import javax.persistence.Id;
 /**
  * Created by Moorka on 11.06.2017.
  */
-//@Entity
+
 @ResponseBody
 public class PriceSelection {
 
 
     @ApiModelProperty(notes = "Product name")
-    String name;
+    private  String name;
     @ApiModelProperty(notes = "Count of product")
-    long count;
+    private  long count;
 
     public PriceSelection() {
         super();

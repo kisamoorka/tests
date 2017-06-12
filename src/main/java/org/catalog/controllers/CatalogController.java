@@ -88,6 +88,19 @@ public class CatalogController {
         return productRepository.findOne(id);
     }
 
+    @ApiOperation(value = "Update product price by ID")
+    @RequestMapping(value = "/product/{id}", method= RequestMethod.PUT, produces = "application/json")
+    public @ResponseBody HttpStatus UpdateProductPriceById(@PathVariable Long id, @RequestParam int price, Model model){
+        Product product = productRepository.findOne(id);
+        if (product != null){
+            product.setPrice(price);
+            productRepository.save(product);
+            return  HttpStatus.OK;
+        }
+        return HttpStatus.NOT_FOUND;
+    }
+
+
     @ApiOperation(value = "Search product by category",response = Iterable.class)
     @RequestMapping(value = "/category/products", method= RequestMethod.GET, produces = "application/json")
     public  @ResponseBody Iterable<Product> productsByCategory(@RequestParam Long id, Model model){
