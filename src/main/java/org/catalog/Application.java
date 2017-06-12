@@ -11,6 +11,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Arrays;
 
+/**
+ * Created by Moorka on 09.06.2017.
+ */
 
 @SpringBootApplication
 public class Application implements CommandLineRunner {

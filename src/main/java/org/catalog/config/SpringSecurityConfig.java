@@ -4,6 +4,9 @@ package org.catalog.config;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+/**
+ * Created by Moorka on 09.06.2017.
+ */
 
 @Configuration
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
